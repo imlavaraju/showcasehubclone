@@ -7,36 +7,39 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevState) => !prevState);
   };
+
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         <IoLogoSkype style={{ width: "40px", height: "40px" }} />
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
+        onClick={toggleMenu}
         aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
+        aria-expanded={isOpen}
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <Link to="./" class="nav-link active">
-            Home <span class="sr-only">(current)</span>
+      <div
+        className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+        id="navbarNavAltMarkup"
+      >
+        <div className="navbar-nav">
+          <Link to="/" className="nav-link active">
+            Home <span className="sr-only">(current)</span>
           </Link>
-          <Link to="./projects" class="nav-link">
+          <Link to="/projects" className="nav-link">
             Projects
           </Link>
-          <Link to="./interviewquestions" class="nav-link">
-            InterviewQuestionns
+          <Link to="/interviewquestions" className="nav-link">
+            Interview Questions
           </Link>
-          <Link to="./ebooks" class="nav-link ">
+          <Link to="/ebooks" className="nav-link">
             Ebooks
           </Link>
         </div>
@@ -44,4 +47,5 @@ const Header = () => {
     </nav>
   );
 };
+
 export default Header;
