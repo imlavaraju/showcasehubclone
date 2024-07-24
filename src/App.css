@@ -1,38 +1,281 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  font-size: 16px;
+  align-items: center;
+}
+.icon {
+  list-style: none;
+  margin-left: 40px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  padding: 8px 0;
+  padding-left: 20px;
+}
+.menu li {
+  padding-left: 20px;
+  font-size: 16px;
+}
+.menu-bar {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: none;
+}
+
+.dropdown-button {
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; /* Full width of the parent container */
+  max-width: 400px; /* Maximum width of 400px */
+  height: 400px; /* Set height to 400px */
+  top: 100%; /* Position directly below the parent container */
+  left: 0; /* Align to the left edge of the parent container */
+  z-index: 1000; /* Ensure it appears on top of other content */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 768px) {
+  .dropdown {
+    display: inline-block;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+img .img-fluid {
+  height: 376;
+  width: 376;
+}
+
+/* projects------*/
+.container {
+  margin-top: 5rem;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mb-5 {
+  margin-bottom: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-heading {
+  color: rgb(0, 123, 255);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.search-container input {
+  border-radius: 30px;
+  border: 2px solid rgb(0, 123, 255);
+  font-size: 1.2rem;
+  padding: 12px 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-col {
+  margin-bottom: 1.5rem;
+  opacity: 1;
+  will-change: auto;
+  transform: none;
+}
+
+.project-card {
+  background: linear-gradient(
+    135deg,
+    rgb(246, 211, 101) 0%,
+    rgb(253, 160, 133) 100%
+  );
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  margin-bottom: 1.5rem;
+}
+
+.text-dark {
+  color: #343a40;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.rounded-pill {
+  border-radius: 50rem;
+}
+/*--interview----*/
+#interview-categories-container {
+  margin-top: 4rem;
+}
+
+.breadcrumb-nav.show {
+  margin-bottom: 1.5rem;
+}
+
+.row.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+#interview-categories-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.category-card .card-title {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.category-card .card-description {
+  margin-top: 1rem;
+  color: #6c757d;
+}
+
+.category-card .card-text {
+  margin-top: 1rem;
+  color: #6c757d;
+}
+
+.category-card .card-text .text-muted {
+  color: #6c757d !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+/*---Ebooks----*/
+.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: rgb(51, 51, 51);
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border-radius: 30px;
+  padding: 12px 20px;
+}
+
+.card {
+  background: rgb(249, 249, 249);
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+}
+
+.card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-title {
+  color: rgb(0, 123, 255);
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-text {
+  color: rgb(108, 117, 125);
 }
