@@ -54,7 +54,7 @@ const Ebooks = () => {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3  g-4">
         {filteredCategories.map((category, index) => (
           <div key={index} className="col mb-4">
-            <a className="text-decoration-none" href="">
+            <a className="text-decoration-none" href="./ebooks">
               <div className="card h-100 text-center">
                 <div className="card-body d-flex flex-column align-items-center">
                   <i className="fas fa-laptop-code mb-3"></i>

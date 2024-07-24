@@ -84,10 +84,7 @@ const Projects = () => {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3g-4">
         {filteredProjects.map((proj, index) => (
           <div key={index} className="col mb-4 project-col">
-            <a
-              className="text-decoration-none"
-              href={`/projects/${proj.lang.toLowerCase()}`}
-            >
+            <a className="text-decoration-none" href="./projects">
               <div
                 className="card h-100 project-card"
                 style={{ background: proj.gradient }}
