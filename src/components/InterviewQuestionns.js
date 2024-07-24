@@ -75,7 +75,7 @@ const InterviewQuestions = () => {
       >
         {filteredCategories.map((category, index) => (
           <div key={index} className="col mb-4">
-            <a className="text-decoration-none" href="/interview-questions">
+            <a className="text-decoration-none" href="/interviewquestions">
               <div className="card h-100 shadow-lg border-e rounded-4 category-card">
                 <div className="card-body d-flex flex-column justify-content-between p-4">
                   <h5 className="card-title text-primary font-weight-bold">
